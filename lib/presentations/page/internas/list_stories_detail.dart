@@ -13,17 +13,27 @@ class PageListStoriesDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarra(),
+      appBar: AppBarra(
+        setting: false,
+        titulo: cuento.titulo,
+      ),
       body: Column(
         children: [
           Expanded(
-              child: PageView.builder(
-            itemCount: cuento.escenas.length,
-            itemBuilder: (context, index) {
-              final escena = cuento.escenas[index];
-              return EscenaWidget(escena: escena);
-            },
-          ))
+            child: PageView.builder(
+              itemCount: cuento.escenas.length,
+              itemBuilder: (context, index) {
+                final escena = cuento.escenas[index];
+                return Stack(
+                  children: [
+                    SizedBox.expand(
+                      child: EscenaWidget(escena: escena),
+                    ),
+                  ],
+                );
+              },
+            ),
+          )
         ],
       ),
     );

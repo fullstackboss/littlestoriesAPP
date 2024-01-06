@@ -5,12 +5,14 @@ class CardCuentos extends StatelessWidget {
   final String foto;
   final String titulo;
   final String subtitulo;
+  final VoidCallback onPress;
 
   const CardCuentos({
     super.key,
     required this.foto,
     required this.titulo,
     required this.subtitulo,
+    required this.onPress,
   });
 
   @override
@@ -41,6 +43,7 @@ class CardCuentos extends StatelessWidget {
           foto2: foto,
           titulo2: titulo,
           subtitulo2: subtitulo,
+          onPress2: onPress,
         ) // Reemplaza YourCardContent con el contenido real
         );
   }
@@ -50,12 +53,14 @@ class CardContenido extends StatelessWidget {
   final String foto2;
   final String titulo2;
   final String subtitulo2;
+  final VoidCallback onPress2;
 
   const CardContenido({
     super.key,
     required this.foto2,
     required this.titulo2,
     required this.subtitulo2,
+    required this.onPress2,
   });
 
   @override
@@ -79,7 +84,7 @@ class CardContenido extends StatelessWidget {
                   const SizedBox(height: 10),
                   FilledButton(
                     onPressed: () {
-                      //context.pushNamed(DetailsCuentos.name);
+                      onPress2();
                     },
                     child: const Text('ENTRAR'),
                   )
@@ -102,7 +107,7 @@ class CardContenido extends StatelessWidget {
                   bottomRight: Radius.circular(20.0),
                 ),
                 child: Image.asset(
-                  'assets/images/thumbs/$foto2',
+                  'assets/images/stories/portraits/$foto2',
                   fit: BoxFit.contain,
                   height: double.infinity,
                   alignment: Alignment.bottomCenter,

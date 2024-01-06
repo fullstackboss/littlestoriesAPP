@@ -32,6 +32,7 @@ dependencies:
   flutter:
     sdk: flutter
   go_router: ^13.0.1
+  lottie: ^2.6.0
 
 dev_dependencies:
 
@@ -59,6 +60,7 @@ flutter:
     - assets/images/stories/portraits/
     - assets/images/stories/scenes/
     - assets/images/characters/
+    - assets/animations/
     - assets/music/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see

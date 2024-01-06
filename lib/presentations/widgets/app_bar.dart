@@ -5,21 +5,28 @@ import 'package:littlestories/presentations/page/internas/screens.dart';
 import 'package:littlestories/presentations/page/setting.dart';
 
 class AppBarra extends StatelessWidget implements PreferredSizeWidget {
+  final bool setting;
+  final String titulo;
+
   const AppBarra({
     super.key,
+    required this.setting,
+    required this.titulo,
   });
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text('Little Stories'),
+      title: Text(titulo),
+      centerTitle: !setting,
       actions: [
-        IconButton(
-          onPressed: () {
-            context.pushNamed(PageSeetingStories.name);
-          },
-          icon: const Icon(IcoStrIcons.configurar),
-        ),
+        if (setting)
+          IconButton(
+            onPressed: () {
+              context.pushNamed(PageSeetingStories.name);
+            },
+            icon: const Icon(IcoStrIcons.configurar),
+          ),
       ],
     );
   }

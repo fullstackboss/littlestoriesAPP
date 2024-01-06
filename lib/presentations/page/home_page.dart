@@ -23,7 +23,10 @@ class _PageHomeState extends State<PageHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarra(),
+      appBar: const AppBarra(
+        setting: true,
+        titulo: 'Little Stories Home',
+      ),
       body: listWidgetStories[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,

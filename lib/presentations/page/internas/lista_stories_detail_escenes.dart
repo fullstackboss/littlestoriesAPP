@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:littlestories/domains/models/model_stories.dart';
+import 'package:lottie/lottie.dart';
 
 class EscenaWidget extends StatelessWidget {
   final Escena escena;
@@ -11,19 +12,41 @@ class EscenaWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Image.asset(
-          'assets/images/stories/scenes/${escena.imagen}',
-          width: 320,
-          fit: BoxFit.cover,
-        ),
-        const SizedBox(
-          height: 40,
-        ),
-        Text(escena.texto),
-      ],
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+      child: Stack(
+        children: [
+          SizedBox.expand(
+            child: LottieBuilder.asset('assets/animations/${escena.imagen}'),
+          ),
+          // Contenedor para el texto con degradado oscuro en la parte inferior
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              height: 100.0,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                  colors: [Colors.black.withOpacity(0.0), Colors.transparent],
+                ),
+              ),
+              child: Center(
+                child: Text(
+                  escena.texto,
+                  // ignore: prefer_const_constructors
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
