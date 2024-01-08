@@ -12,30 +12,43 @@ class EscenaWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
-      child: Stack(
-        children: [
-          SizedBox.expand(
-            child: LottieBuilder.asset('assets/animations/${escena.imagen}'),
-          ),
-          // Contenedor para el texto con degradado oscuro en la parte inferior
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-              height: 100.0,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.bottomCenter,
-                  end: Alignment.topCenter,
-                  colors: [Colors.black.withOpacity(0.0), Colors.transparent],
+    double screenWidth = MediaQuery.of(context).size.width;
+
+    return Stack(
+      children: [
+        Image.asset('assets/images/stories/scenes/${escena.background}',
+            width: screenWidth, fit: BoxFit.cover),
+        SizedBox.expand(
+          child: Container(
+              padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.1),
+              child: LottieBuilder.asset('assets/animations/${escena.imagen}')),
+        ),
+        // Contenedor para el texto con degradado oscuro en la parte inferior
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Container(
+                height: 140.0,
+                decoration: BoxDecoration(
+                  //degrade debajo de letras
+                  gradient: LinearGradient(
+                    begin: Alignment.center,
+                    end: Alignment.topCenter,
+                    colors: [
+                      Colors.white.withOpacity(0),
+                      Colors.white.withOpacity(0)
+                    ],
+                  ),
+                  //Fin degrade debajo de letras
                 ),
               ),
-              child: Center(
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.08),
                 child: Text(
                   escena.texto,
-                  // ignore: prefer_const_constructors
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.black,
                     fontSize: 18.0,
                     fontWeight: FontWeight.bold,
@@ -43,10 +56,10 @@ class EscenaWidget extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
-            ),
+            ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

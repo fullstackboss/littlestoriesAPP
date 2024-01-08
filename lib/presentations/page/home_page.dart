@@ -25,7 +25,7 @@ class _PageHomeState extends State<PageHome> {
     return Scaffold(
       appBar: const AppBarra(
         setting: true,
-        titulo: 'Little Stories Home',
+        titulo: 'Cuentos animados',
       ),
       body: listWidgetStories[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(

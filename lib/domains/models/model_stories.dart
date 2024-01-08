@@ -38,12 +38,14 @@ class Cuento {
 class Escena {
   final int idEscena;
   final String imagen;
+  final String background;
   final String sonido;
   final String texto;
 
   Escena({
     required this.idEscena,
     required this.imagen,
+    required this.background,
     required this.sonido,
     required this.texto,
   });
@@ -51,6 +53,7 @@ class Escena {
   factory Escena.fromJson(Map<String, dynamic> json) => Escena(
         idEscena: json["id_escena"],
         imagen: json["imagen"],
+        background: json["background"],
         sonido: json["sonido"],
         texto: json["texto"],
       );
@@ -58,6 +61,7 @@ class Escena {
   Map<String, dynamic> toJson() => {
         "id_escena": idEscena,
         "imagen": imagen,
+        "background": background,
         "sonido": sonido,
         "texto": texto,
       };

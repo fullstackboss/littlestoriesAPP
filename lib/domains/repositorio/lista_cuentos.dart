@@ -10,6 +10,7 @@ final listaCuento = datosCuentos.map((data) {
       return Escena(
         idEscena: escenaData["id_escena"],
         imagen: escenaData["imagen"],
+        background: escenaData["background"],
         sonido: escenaData["sonido"],
         texto: escenaData["texto"],
       );

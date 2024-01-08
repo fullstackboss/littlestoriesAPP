@@ -10,7 +10,7 @@ class PageWelcome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width * 0.6;
+    double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
 
     Random random = Random();
@@ -26,44 +26,71 @@ class PageWelcome extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              LottieBuilder.asset(
-                'assets/animations/${intros[numeroAleatorio]}',
-                width: screenWidth,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            /* const Text('Cuentos Animados',
+                style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.purple)),
+            SizedBox(
+              height: screenHeight * 0.05,
+            ), */
+            Expanded(
+              flex: 7,
+              child: Stack(
+                alignment: AlignmentDirectional.center,
+                children: [
+                  Container(
+                    width: screenWidth * 0.7,
+                    height: screenWidth * 0.7,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.purple.shade50,
+                    ),
+                  ),
+                  LottieBuilder.asset(
+                    'assets/animations/${intros[numeroAleatorio]}',
+                    width: screenWidth * 0.7,
+                  ),
+                ],
               ),
-              SizedBox(
-                height: screenHeight * 0.04,
-              ),
-              Container(
+            ),
+            Expanded(
+              flex: 3,
+              child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 50),
-                child: const Column(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Text('Bienvenidos Stories',
-                        style: TextStyle(
-                            fontSize: 22, fontWeight: FontWeight.w600)),
-                    SizedBox(height: 14),
-                    Text(
-                        'Explora emocionantes aventuras llenas de magia y diversión.',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.w400)),
+                    const Column(
+                      children: [
+                        Text('Bienvenidos',
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.w500)),
+                        SizedBox(height: 8),
+                        Text(
+                            'Explora emocionantes aventuras llenas de magia y diversión.',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontSize: 14, fontWeight: FontWeight.w400)),
+                      ],
+                    ),
+                    FilledButton(
+                      style: FilledButton.styleFrom(
+                        backgroundColor: const Color(0xFFFE4F5B),
+                      ),
+                      onPressed: () {
+                        context.pushNamed(PageHome.name);
+                      },
+                      child: const Text('Comenzar'),
+                    )
                   ],
                 ),
               ),
-              SizedBox(
-                height: screenHeight * 0.1,
-              ),
-              FilledButton(
-                onPressed: () {
-                  context.pushNamed(PageHome.name);
-                },
-                child: const Text('Comenzar'),
-              )
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
