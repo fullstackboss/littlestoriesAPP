@@ -31,17 +31,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  audioplayers: ^5.2.1
   flutter_native_splash: ^2.3.7
   go_router: ^13.0.1
   lottie: ^2.6.0
 
 dev_dependencies:
-
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
@@ -63,7 +58,7 @@ flutter:
     - assets/images/stories/scenes/
     - assets/images/characters/
     - assets/animations/
-    - assets/music/
+    - assets/audio/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -99,10 +94,9 @@ flutter:
           weight: 400
         - asset: assets/fonts/mali/Mali-Regular.ttf
           weight: 500
-    - family:  IcoStrIcons
+    - family: IcoStrIcons
       fonts:
         - asset: assets/icons/IcoStrIcons.ttf
-
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

@@ -27,6 +27,7 @@ class AppBarra extends StatelessWidget implements PreferredSizeWidget {
             },
             icon: const Icon(IcoStrIcons.configurar),
           ),
+        //IconButton(onPressed: () {}, icon: Icon(IcoStrIcons.conSonido))
       ],
     );
   }
