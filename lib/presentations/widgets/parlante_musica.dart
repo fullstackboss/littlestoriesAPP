@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:littlestories/configs/icons.dart';
 
 class ReproduceAudio extends StatefulWidget {
   final String pistaMusica;
@@ -57,9 +58,11 @@ class _ReproduceAudioState extends State<ReproduceAudio> {
 
   @override
   Widget build(BuildContext context) {
-    return FilledButton(
+    return IconButton.filled(
       onPressed: _togglePlayer,
-      child: Text(_isPlaying ? 'Pause' : 'Play'),
+      icon: _isPlaying
+          ? const Icon(IcoStrIcons.conSonido)
+          : const Icon(IcoStrIcons.sinSonido),
     );
   }
 }
