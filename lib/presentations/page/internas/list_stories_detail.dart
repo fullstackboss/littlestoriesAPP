@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:littlestories/domains/models/model_stories.dart';
 import 'package:littlestories/presentations/page/internas/lista_stories_escenes.dart';
 import 'package:littlestories/presentations/widgets/app_bar.dart';
+import 'package:littlestories/presentations/widgets/app_bar_music.dart';
 import 'package:littlestories/presentations/widgets/parlante_musica.dart';
 
 class PageListStoriesDetails extends StatelessWidget {
@@ -16,13 +17,13 @@ class PageListStoriesDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarra(
-        setting: false,
-        titulo: cuento.titulo + pistaMusical,
+      appBar: AppBarMusica(
+        pistaMusical: pistaMusical,
+        titulo: cuento.titulo,
       ),
       body: Column(
         children: [
-          ReproduceAudio(pistaMusica: pistaMusical),
+          //ReproduceAudio(pistaMusica: pistaMusical),
           Expanded(
             child: PageView.builder(
               itemCount: cuento.escenas.length,

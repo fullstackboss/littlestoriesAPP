@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:littlestories/configs/icons.dart';
-import 'package:littlestories/presentations/page/internas/screens.dart';
-import 'package:littlestories/presentations/page/setting.dart';
 
 class AppBarra extends StatelessWidget implements PreferredSizeWidget {
   final bool setting;
@@ -23,9 +20,9 @@ class AppBarra extends StatelessWidget implements PreferredSizeWidget {
         if (setting)
           IconButton(
             onPressed: () {
-              context.pushNamed(PageSeetingStories.name);
+              //context.pushNamed(PageSeetingStories.name);
             },
-            icon: const Icon(IcoStrIcons.configurar),
+            icon: const Icon(IcoStrIcons.conSonido),
           ),
         //IconButton(onPressed: () {}, icon: Icon(IcoStrIcons.conSonido))
       ],

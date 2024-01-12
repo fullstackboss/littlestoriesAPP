@@ -18,7 +18,7 @@ class _PageHomeState extends State<PageHome> {
   final listWidgetStories = <Widget>[
     const PageListStories(),
     const PageCharacterStories(),
-    const PageMusicStories(),
+    const PageSetting(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -41,8 +41,8 @@ class _PageHomeState extends State<PageHome> {
           BottomNavigationBarItem(
               icon: Icon(IcoStrIcons.personajes), label: 'Personajes'),
           BottomNavigationBarItem(
-            icon: Icon(IcoStrIcons.conSonido),
-            label: 'Musica',
+            icon: Icon(IcoStrIcons.configurar),
+            label: 'Configurar',
           )
         ],
       ),

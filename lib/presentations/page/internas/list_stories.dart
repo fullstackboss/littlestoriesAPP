@@ -24,30 +24,12 @@ class PageListStories extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) => PageListStoriesDetails(
-                  cuento: listaCuento[index],
-                  pistaMusical: listaCuento[index].musica,
-                ),
+                    cuento: listaCuento[index],
+                    pistaMusical: listaCuento[index].musica),
               ),
             );
           },
         );
-        /* GestureDetector(
-          child: ListTile(
-            leading: Image.asset(
-                'assets/images/stories/portraits/${listaCuento[index].portada}',
-                width: 50),
-            title: Text(listaCuento[index].titulo),
-          ),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) =>
-                    PageListStoriesDetails(cuento: listaCuento[index]),
-              ),
-            );
-          },
-        ); */
       },
     );
   }
