@@ -23,8 +23,10 @@ class PageListStories extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) =>
-                    PageListStoriesDetails(cuento: listaCuento[index]),
+                builder: (context) => PageListStoriesDetails(
+                  cuento: listaCuento[index],
+                  pistaMusical: listaCuento[index].musica,
+                ),
               ),
             );
           },

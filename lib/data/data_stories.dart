@@ -2,7 +2,7 @@ final List<Map<String, dynamic>> datosCuentos = [
   {
     "titulo": "La vaca y el toro",
     "subtitulo": "Historia de animales",
-    "musica": "musica_1.mp3",
+    "musica": "audio_1.mp3",
     "escenas": [
       {
         "id_escena": 1,
@@ -43,7 +43,7 @@ final List<Map<String, dynamic>> datosCuentos = [
   {
     "titulo": "Los 3 zorros",
     "subtitulo": "Historia del bosque",
-    "musica": "musica_2.mp3",
+    "musica": "audio_2.mp3",
     "escenas": [
       {
         "id_escena": 1,
@@ -76,7 +76,7 @@ final List<Map<String, dynamic>> datosCuentos = [
   {
     "titulo": "Los 3 gusanos",
     "subtitulo": "Habia una vez 3 gusanos",
-    "musica": "musica_2.mp3",
+    "musica": "audio_3.mp3",
     "escenas": [
       {
         "id_escena": 1,
@@ -116,7 +116,7 @@ final List<Map<String, dynamic>> datosCuentos = [
   {
     "titulo": "Las palomas",
     "subtitulo": "Historias aladas",
-    "musica": "musica_2.mp3",
+    "musica": "audio_4.mp3",
     "escenas": [
       {
         "id_escena": 1,
@@ -148,7 +148,7 @@ final List<Map<String, dynamic>> datosCuentos = [
   {
     "titulo": "El peresoso",
     "subtitulo": "Historias felinas",
-    "musica": "musica_2.mp3",
+    "musica": "audio_5.mp3",
     "escenas": [
       {
         "id_escena": 1,
@@ -188,12 +188,12 @@ final List<Map<String, dynamic>> datosCuentos = [
   {
     "titulo": "El marciano",
     "subtitulo": "Historias del espacio",
-    "musica": "musica_2.mp3",
+    "musica": "audio_6.mp3",
     "escenas": [
       {
         "id_escena": 1,
         "imagen": "anima_1.json",
-        "background": "fondo_b1.jpg",
+        "background": "fondo_ba.jpg",
         "sonido": "sonido_c3_e1.mp3",
         "texto":
             "Había una vez en un pequeño pueblo un gato curioso llamado Whiskers.",
@@ -201,14 +201,14 @@ final List<Map<String, dynamic>> datosCuentos = [
       {
         "id_escena": 2,
         "imagen": "anima_2.json",
-        "background": "fondo_b2.jpg",
+        "background": "fondo_bb.jpg",
         "sonido": "sonido_c3_e2.mp3",
         "texto": "Siempre explorando, un día descubrió un misterioso portal. ",
       },
       {
         "id_escena": 3,
         "imagen": "anima_3.json",
-        "background": "fondo_b3.jpg",
+        "background": "fondo_bc.jpg",
         "sonido": "sonido_c3_e3.mp3",
         "texto":
             "Al cruzarlo, encontró un mundo mágico lleno de aventuras y amigos sorprendentes. ",
@@ -216,7 +216,7 @@ final List<Map<String, dynamic>> datosCuentos = [
       {
         "id_escena": 4,
         "imagen": "anima_4.json",
-        "background": "fondo_b4.jpg",
+        "background": "fondo_bd.jpg",
         "sonido": "sonido_c3_e4.mp3",
         "texto":
             "Desde entonces, Whiskers vivió felices momentos explorando y compartiendo historias mágicas.",
