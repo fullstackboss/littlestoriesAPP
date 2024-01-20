@@ -57,7 +57,9 @@ flutter:
     - assets/images/stories/portraits/
     - assets/images/stories/scenes/
     - assets/images/characters/
-    - assets/animations/
+    - assets/animations/characters/
+    - assets/animations/intro/
+    - assets/animations/stories/
     - assets/audio/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -13,11 +13,12 @@ class PageWelcome extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
 
     Random random = Random();
-    int numeroAleatorio = random.nextInt(3);
+    int numeroAleatorio = random.nextInt(4);
 
     List intros = [
       'intro1.json',
       'intro2.json',
+      'intro3.json',
       'intro4.json',
       'intro5.json',
     ];
@@ -50,7 +51,7 @@ class PageWelcome extends StatelessWidget {
                     ),
                   ),
                   LottieBuilder.asset(
-                    'assets/animations/${intros[numeroAleatorio]}',
+                    'assets/animations/intro/${intros[numeroAleatorio]}',
                     width: screenWidth * 0.7,
                   ),
                 ],

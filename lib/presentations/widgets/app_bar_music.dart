@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:littlestories/configs/icons.dart';
 import 'package:littlestories/presentations/widgets/parlante_musica.dart';
 
 class AppBarMusica extends StatelessWidget implements PreferredSizeWidget {
