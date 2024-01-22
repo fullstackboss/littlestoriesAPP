@@ -42,7 +42,7 @@ final List<Map<String, dynamic>> datosCharacters = [
   {
     "id": 1,
     "nombre": "Pikachu",
-    "imagen": "personaje_1.jpg",
+    "imagen": "personaje_5.jpg",
     "edad": 5,
     "personalidad": "Soy muy juegueton lorem iuem aboslutis armus",
     "frase": "Soy unico y nadie me detiene",
@@ -52,7 +52,7 @@ final List<Map<String, dynamic>> datosCharacters = [
   {
     "id": 2,
     "nombre": "Bolbasor",
-    "imagen": "personaje_2.jpg",
+    "imagen": "personaje_6.jpg",
     "edad": 4,
     "personalidad": "Soy muy serio lorem ipsum facto meruem aboslutis armus",
     "frase": "Vive la vida nadie me detiene",
@@ -62,7 +62,7 @@ final List<Map<String, dynamic>> datosCharacters = [
   {
     "id": 3,
     "nombre": "Charmander",
-    "imagen": "personaje_3.jpg",
+    "imagen": "personaje_7.jpg",
     "edad": 4,
     "personalidad": "Soy muy serio lorem ipsum facto meruem aboslutis armus",
     "frase": "Vive la vida nadie me detiene",
@@ -72,7 +72,7 @@ final List<Map<String, dynamic>> datosCharacters = [
   {
     "id": 4,
     "nombre": "Chikorita",
-    "imagen": "personaje_4.jpg",
+    "imagen": "personaje_8.jpg",
     "edad": 4,
     "personalidad": "Soy muy serio lorem ipsum facto meruem aboslutis armus",
     "frase": "Vive la vida nadie me detiene",
@@ -82,7 +82,7 @@ final List<Map<String, dynamic>> datosCharacters = [
   {
     "id": 1,
     "nombre": "Pikachu",
-    "imagen": "personaje_1.jpg",
+    "imagen": "personaje_9.jpg",
     "edad": 5,
     "personalidad": "Soy muy juegueton lorem iuem aboslutis armus",
     "frase": "Soy unico y nadie me detiene",
@@ -92,7 +92,7 @@ final List<Map<String, dynamic>> datosCharacters = [
   {
     "id": 2,
     "nombre": "Bolbasor",
-    "imagen": "personaje_2.jpg",
+    "imagen": "personaje_10.jpg",
     "edad": 4,
     "personalidad": "Soy muy serio lorem ipsum facto meruem aboslutis armus",
     "frase": "Vive la vida nadie me detiene",
@@ -102,7 +102,7 @@ final List<Map<String, dynamic>> datosCharacters = [
   {
     "id": 3,
     "nombre": "Charmander",
-    "imagen": "personaje_3.jpg",
+    "imagen": "personaje_11.jpg",
     "edad": 4,
     "personalidad": "Soy muy serio lorem ipsum facto meruem aboslutis armus",
     "frase": "Vive la vida nadie me detiene",
@@ -112,7 +112,7 @@ final List<Map<String, dynamic>> datosCharacters = [
   {
     "id": 4,
     "nombre": "Chikorita",
-    "imagen": "personaje_4.jpg",
+    "imagen": "personaje_12.jpg",
     "edad": 4,
     "personalidad": "Soy muy serio lorem ipsum facto meruem aboslutis armus",
     "frase": "Vive la vida nadie me detiene",

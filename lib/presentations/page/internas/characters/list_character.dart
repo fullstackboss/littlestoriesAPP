@@ -20,77 +20,91 @@ class PageCharacterStories extends StatelessWidget {
             itemBuilder: (BuildContext context, int index) {
               return CardCharacter(
                 index: index,
-                foto: listaCharacters[index].imagen,
               );
             }));
   }
 }
 
 class CardCharacter extends StatelessWidget {
-  final String foto;
   final int index;
   const CardCharacter({
     super.key,
     required this.index,
-    required this.foto,
   });
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Stack(
-        alignment: Alignment.bottomCenter,
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(
-                color: Colors.grey, // Color del borde
-                width: 0.0, // Ancho del borde
-              ),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.3), // Color de la sombra
-                  spreadRadius: 2.0, // Esparcimiento de la sombra
-                  blurRadius: 8.0, // Difuminado de la sombra
-                  offset: const Offset(0, 2), // Desplazamiento de la sombra
+      child: GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => PageListCharactersDetails(
+                  nombre: listaCharacters[index].nombre,
+                  imagen: listaCharacters[index].imagen,
+                  tag: 'tag$index'),
+            ),
+          );
+        },
+        child: Stack(
+          alignment: Alignment.bottomCenter,
+          children: [
+            Hero(
+              tag: 'tag$index',
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: Colors.grey, // Color del borde
+                    width: 0.0, // Ancho del borde
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.3), // Color de la sombra
+                      spreadRadius: 2.0, // Esparcimiento de la sombra
+                      blurRadius: 8.0, // Difuminado de la sombra
+                      offset: const Offset(0, 2), // Desplazamiento de la sombra
+                    ),
+                  ],
                 ),
-              ],
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(12),
-              child: Image.asset(
-                'assets/images/characters/$foto',
-                fit: BoxFit.cover,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.asset(
+                    'assets/images/characters/${listaCharacters[index].imagen}',
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
             ),
-          ),
-          /* Container(
-            padding: const EdgeInsets.all(8.0),
-            color: Colors.red.withOpacity(1),
-            child: Column(
-              children: [
-                Text(
-                  listaCharacters[index].nombre,
-                  style: const TextStyle(fontSize: 15, color: Colors.black),
-                ),
-              ],
+            Container(
+              padding: const EdgeInsets.all(8.0),
+              color: Colors.red.withOpacity(0),
+              child: Column(
+                children: [
+                  Text(
+                    listaCharacters[index].nombre,
+                    style: const TextStyle(fontSize: 15, color: Colors.black),
+                  ),
+                ],
+              ),
             ),
-          ), */
-          FilledButton(
+            /*  FilledButton(
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => PageListCharactersDetails(
-                      nombre: listaCharacters[index].nombre,
-                      imagen: listaCharacters[index].imagen,
-                    ),
+                        nombre: listaCharacters[index].nombre,
+                        imagen: listaCharacters[index].imagen,
+                        tag: 'tag$index'),
                   ),
                 );
               },
-              child: Text(listaCharacters[index].nombre)),
-        ],
+              child: Text(listaCharacters[index].nombre),
+            ), */
+          ],
+        ),
       ),
     );
   }
